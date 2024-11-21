@@ -3,5 +3,15 @@
     "require": {
         "symfony/http-kernel": "^6.4",
         "symfony/translation": "^6.4"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2.13",
+            "php-64bit": "8.2.13"
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
     }
 }
