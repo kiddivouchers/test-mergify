@@ -1,0 +1,27 @@
+version: 2
+updates:
+  - package-ecosystem: composer
+    directory: /
+    open-pull-requests-limit: 10
+    schedule:
+      interval: daily
+    reviewers: []
+    commit-message:
+      prefix: composer
+      include: scope
+    allow:
+      - dependency-type: direct
+      # Keep Symfony polyfill libraries updated even if they are not direct dependencies.
+      - dependency-name: symfony/polyfill-*
+      # PSR packages are (generally) just interfaces so update them when possible.
+      - dependency-name: psr/*
+      # Symfony contracts are mainly interfaces so update them when possible.
+      - dependency-name: symfony/*-contracts
+    groups:
+      symfony-contracts:
+        patterns:
+          - "symfony/*-contracts"
+        update-types:
+          - minor
+          - patch
+    labels: []
