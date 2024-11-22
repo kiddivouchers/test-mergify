@@ -14,7 +14,8 @@ queue_rules:
     queue_conditions:
       - author = dependabot[bot]
     merge_conditions:
-      - check-success = build
+      - check-success = "PHP 8.2"
+      - check-success = "PHP 8.3"
 
 merge_protections:
   - name: Dependabot Major Updates
@@ -23,7 +24,9 @@ merge_protections:
       - base = main
       - dependabot-update-type = "version-update:semver-major"
     success_conditions:
-      - "#approved-reviews-by >= 2"
+      - or:
+        - "#approved-reviews-by >= 2"
+        - "approved-reviews-by = cs278"
   - name: Dependabot Minor Updates
     description: Test
     if:
