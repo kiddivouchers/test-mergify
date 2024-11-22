@@ -1,3 +1,17 @@
+queue_rules:
+  # Order is important here.
+  - name: default
+    update_method: rebase
+    queue_conditions:
+      - author != dependabot[bot]
+
+  - name: dependabot
+    batch_size: 10
+    update_method: rebase
+    batch_max_wait_time: 30 min
+    queue_conditions:
+      - author = dependabot[bot]
+
 merge_protections:
   - name: Do not merge outdated PRs
     description: Make sure PRs are almost up to date before merging
