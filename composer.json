@@ -1,7 +1,7 @@
 {
 
     "require": {
-        "symfony/http-kernel": "^6.4",
+        "symfony/http-kernel": "^7.1",
         "symfony/translation": "^7.1"
     },
     "config": {
