@@ -8,6 +8,8 @@ updates:
     commit-message:
       prefix: composer
       include: scope
+    target-branch: "deps"
+    rebase-strategy: "disabled"
     allow:
       - dependency-type: direct
       # Keep Symfony polyfill libraries updated even if they are not direct dependencies.
