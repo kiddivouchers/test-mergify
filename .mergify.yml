@@ -1,18 +1,21 @@
 queue_rules:
   # Order is important here.
-  - name: default
-    update_method: rebase
-    queue_conditions:
-      - author != dependabot[bot]
-    merge_conditions:
-      - check-success = build
-
   - name: dependabot
     batch_size: 10
     update_method: rebase
-    batch_max_wait_time: 30 min
+    queue_branch_merge_method: fast-forward
+    merge_method: merge
+    batch_max_wait_time: 5 min
     queue_conditions:
       - author = dependabot[bot]
+      - "#commits = 1"
+    merge_conditions:
+      - check-success = "PHP 8.2"
+      - check-success = "PHP 8.3"
+
+  - name: default
+    update_method: rebase
+    queue_conditions: []
     merge_conditions:
       - check-success = "PHP 8.2"
       - check-success = "PHP 8.3"
