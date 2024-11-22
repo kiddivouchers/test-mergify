@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "622b16033d96640dfd0e4152cd7c8ce7",
+    "content-hash": "5f79c1883667424ab0a55027eb20e0e3",
     "packages": [
         {
             "name": "psr/container",
@@ -459,16 +459,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v7.1.6",
+            "version": "v7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "7a48dda96fe16711fc042df38ca1a7dd4d9d6387"
+                "reference": "50a9e64496b4d6cba7c7cc29be308593e34f6883"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/7a48dda96fe16711fc042df38ca1a7dd4d9d6387",
-                "reference": "7a48dda96fe16711fc042df38ca1a7dd4d9d6387",
+                "url": "https://api.github.com/repos/symfony/form/zipball/50a9e64496b4d6cba7c7cc29be308593e34f6883",
+                "reference": "50a9e64496b4d6cba7c7cc29be308593e34f6883",
                 "shasum": ""
             },
             "require": {
@@ -536,7 +536,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v7.1.6"
+                "source": "https://github.com/symfony/form/tree/v7.1.0"
             },
             "funding": [
                 {
@@ -552,7 +552,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-10-09T08:46:59+00:00"
+            "time": "2024-05-20T16:41:11+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -1955,16 +1955,16 @@
         },
         {
             "name": "symfony/uid",
-            "version": "v7.0.8",
+            "version": "v7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/uid.git",
-                "reference": "82d01607b09ba79f38efe4c213dbf528ff0beeed"
+                "reference": "3bbcb15f311b86f72486826ade080d8013231f96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/uid/zipball/82d01607b09ba79f38efe4c213dbf528ff0beeed",
-                "reference": "82d01607b09ba79f38efe4c213dbf528ff0beeed",
+                "url": "https://api.github.com/repos/symfony/uid/zipball/3bbcb15f311b86f72486826ade080d8013231f96",
+                "reference": "3bbcb15f311b86f72486826ade080d8013231f96",
                 "shasum": ""
             },
             "require": {
@@ -2009,7 +2009,7 @@
                 "uuid"
             ],
             "support": {
-                "source": "https://github.com/symfony/uid/tree/v7.0.8"
+                "source": "https://github.com/symfony/uid/tree/v7.1.0"
             },
             "funding": [
                 {
@@ -2025,7 +2025,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:55:39+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/var-dumper",
@@ -2112,16 +2112,16 @@
         },
         {
             "name": "symfony/workflow",
-            "version": "v7.0.8",
+            "version": "v7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/workflow.git",
-                "reference": "4cfb7fec060bf5bd2c38f14dc0c221a32a19b9eb"
+                "reference": "2a742b5ec3feffdaa9d583398d64fb6c2cbf6881"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/workflow/zipball/4cfb7fec060bf5bd2c38f14dc0c221a32a19b9eb",
-                "reference": "4cfb7fec060bf5bd2c38f14dc0c221a32a19b9eb",
+                "url": "https://api.github.com/repos/symfony/workflow/zipball/2a742b5ec3feffdaa9d583398d64fb6c2cbf6881",
+                "reference": "2a742b5ec3feffdaa9d583398d64fb6c2cbf6881",
                 "shasum": ""
             },
             "require": {
@@ -2179,7 +2179,7 @@
                 "workflow"
             ],
             "support": {
-                "source": "https://github.com/symfony/workflow/tree/v7.0.8"
+                "source": "https://github.com/symfony/workflow/tree/v7.1.0"
             },
             "funding": [
                 {
@@ -2195,17 +2195,17 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:55:39+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
-    "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "stability-flags": {},
+    "prefer-stable": true,
+    "prefer-lowest": true,
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2.13",
         "php-64bit": "8.2.13"
