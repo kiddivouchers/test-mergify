@@ -1,7 +1,7 @@
 {
 
     "require": {
-        "symfony/form": "7.0.*",
+        "symfony/form": "7.1.*",
         "symfony/http-kernel": "^7.1",
         "symfony/translation": "^7.1",
         "symfony/uid": "7.0.*",
