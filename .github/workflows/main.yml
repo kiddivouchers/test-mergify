@@ -34,4 +34,4 @@ jobs:
       - name: Install dependencies
         run: |
             composer install -v --no-progress
-            sleep 30
+            sleep 5
