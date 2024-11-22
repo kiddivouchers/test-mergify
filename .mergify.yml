@@ -4,6 +4,8 @@ queue_rules:
     update_method: rebase
     queue_conditions:
       - author != dependabot[bot]
+    merge_conditions:
+      - check-success = build
 
   - name: dependabot
     batch_size: 10
@@ -11,6 +13,8 @@ queue_rules:
     batch_max_wait_time: 30 min
     queue_conditions:
       - author = dependabot[bot]
+    merge_conditions:
+      - check-success = build
 
 merge_protections:
   - name: Dependabot Major Updates
