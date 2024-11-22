@@ -13,12 +13,6 @@ queue_rules:
       - author = dependabot[bot]
 
 merge_protections:
-  - name: Do not merge outdated PRs
-    description: Make sure PRs are almost up to date before merging
-    if:
-      - base = main
-    success_conditions:
-      - "#commits-behind = 0"
   - name: Dependabot Major Updates
     description: Test
     if:
