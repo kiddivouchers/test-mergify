@@ -19,6 +19,10 @@ queue_rules:
 
   - name: default
     update_method: rebase
+    commit_message_template: |
+      Merge pull request #{{ number }} from {{ head }}
+
+      {{ title }}
     queue_conditions: []
     merge_conditions:
       - check-success = "PHP 8.2"
