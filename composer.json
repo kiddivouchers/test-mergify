@@ -1,8 +1,11 @@
 {
 
     "require": {
+        "symfony/form": "7.0.*",
         "symfony/http-kernel": "^7.1",
-        "symfony/translation": "^7.1"
+        "symfony/translation": "^7.1",
+        "symfony/uid": "7.0.*",
+        "symfony/workflow": "7.0.*"
     },
     "config": {
         "platform": {
