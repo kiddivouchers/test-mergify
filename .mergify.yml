@@ -12,7 +12,7 @@ queue_rules:
       {{ title }}
 
       {% for commit in commits %}
-      {{ commit_message }}
+      {{ commit.commit_message }}
       {% endfor %}
     queue_conditions:
       - author = dependabot[bot]
