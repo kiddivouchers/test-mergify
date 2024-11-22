@@ -14,7 +14,8 @@ queue_rules:
     queue_conditions:
       - author = dependabot[bot]
     merge_conditions:
-      - check-success = build
+      - check-success = "PHP 8.2"
+      - check-success = "PHP 8.3"
 
 merge_protections:
   - name: Dependabot Major Updates
