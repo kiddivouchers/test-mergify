@@ -2112,16 +2112,16 @@
         },
         {
             "name": "symfony/workflow",
-            "version": "v7.1.0",
+            "version": "v7.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/workflow.git",
-                "reference": "2a742b5ec3feffdaa9d583398d64fb6c2cbf6881"
+                "reference": "b5dca7ecc55ec401939cd101d1a23d64bbce113b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/workflow/zipball/2a742b5ec3feffdaa9d583398d64fb6c2cbf6881",
-                "reference": "2a742b5ec3feffdaa9d583398d64fb6c2cbf6881",
+                "url": "https://api.github.com/repos/symfony/workflow/zipball/b5dca7ecc55ec401939cd101d1a23d64bbce113b",
+                "reference": "b5dca7ecc55ec401939cd101d1a23d64bbce113b",
                 "shasum": ""
             },
             "require": {
@@ -2179,7 +2179,7 @@
                 "workflow"
             ],
             "support": {
-                "source": "https://github.com/symfony/workflow/tree/v7.1.0"
+                "source": "https://github.com/symfony/workflow/tree/v7.1.6"
             },
             "funding": [
                 {
@@ -2195,17 +2195,17 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-18T09:32:20+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
-    "prefer-stable": true,
-    "prefer-lowest": true,
-    "platform": {},
-    "platform-dev": {},
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2.13",
         "php-64bit": "8.2.13"
