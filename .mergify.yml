@@ -11,9 +11,9 @@ queue_rules:
       {{ commit.commit_message }}
       {% endfor %}
     queue_conditions:
-      - check-success = "Coding Standards and PHPStan"
+      - check-success = "PHP 8.2"
     merge_conditions:
-      - check-success = continuous-integration/jenkins/pr-merge
+      - check-success = "PHP 8.3"
 
 merge_protections:
   - name: Dependabot
