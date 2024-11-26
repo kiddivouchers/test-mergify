@@ -1,11 +1,7 @@
 queue_rules:
-  # Order is important here.
-  - name: dependabot
-    batch_size: 10
+  - name: default
     update_method: rebase
-    #queue_branch_merge_method: fast-forward
-    merge_method: rebase
-    batch_max_wait_time: 1 min
+    merge_method: merge
     commit_message_template: |
       Merge pull request #{{ number }} from {{ head }}
 
@@ -15,37 +11,24 @@ queue_rules:
       {{ commit.commit_message }}
       {% endfor %}
     queue_conditions:
-      - author = dependabot[bot]
-      - "#commits = 1"
+      - check-success = "Coding Standards and PHPStan"
     merge_conditions:
-      - check-success = "PHP 8.2"
-      - check-success = "PHP 8.3"
-
-  - name: default
-    update_method: rebase
-    commit_message_template: |
-      Merge pull request #{{ number }} from {{ head }}
-
-      {{ title }}
-    queue_conditions: []
-    merge_conditions:
-      - check-success = "PHP 8.2"
-      - check-success = "PHP 8.3"
+      - check-success = continuous-integration/jenkins/pr-merge
 
 merge_protections:
-  - name: Dependabot Major Updates
-    description: Test
+  - name: Dependabot - Minor/Patches
     if:
-      - base = main
-      - dependabot-update-type = "version-update:semver-major"
-    success_conditions:
+      - base = develop
+      - author = dependabot[bot]
+      - "#commits = 1"
       - or:
-        - "#approved-reviews-by >= 2"
-        - "approved-reviews-by = cs278"
-  - name: Dependabot Minor Updates
-    description: Test
-    if:
-      - base = main
-      - dependabot-update-type = "version-update:semver-minor"
+        - dependabot-update-type = "version-update:semver-patch"
+        - dependabot-update-type = "version-update:semver-minor"
     success_conditions:
       - "#approved-reviews-by >= 1"
+
+  - name: Default
+    if:
+      - base = develop
+    success_conditions:
+      - "#approved-reviews-by >= 2"
