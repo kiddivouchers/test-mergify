@@ -14,7 +14,7 @@ queue_rules:
       - check-success = "Coding Standards and PHPStan"
     merge_conditions:
       - check-success = continuous-integration/jenkins/pr-merge
-
+    branch_protection_injection_mode: merge
 merge_protections:
   - name: Dependabot - Minor/Patches
     if:
@@ -22,11 +22,10 @@ merge_protections:
       - author = dependabot[bot]
       - "#commits = 1"
       - or:
-        - dependabot-update-type = "version-update:semver-patch"
-        - dependabot-update-type = "version-update:semver-minor"
+          - dependabot-update-type = "version-update:semver-patch"
+          - dependabot-update-type = "version-update:semver-minor"
     success_conditions:
       - "#approved-reviews-by >= 1"
-
   - name: Default
     if:
       - base = main
