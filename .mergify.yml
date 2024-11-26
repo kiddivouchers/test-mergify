@@ -18,7 +18,7 @@ queue_rules:
 merge_protections:
   - name: Dependabot - Minor/Patches
     if:
-      - base = develop
+      - base = main
       - author = dependabot[bot]
       - "#commits = 1"
       - or:
@@ -29,6 +29,6 @@ merge_protections:
 
   - name: Default
     if:
-      - base = develop
+      - base = main
     success_conditions:
       - "#approved-reviews-by >= 2"
